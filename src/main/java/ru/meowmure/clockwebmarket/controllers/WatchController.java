@@ -33,4 +33,14 @@ public class WatchController {
         return "redirect:/watches";
     }
 
+    @PostMapping("/watches/save")
+    public String saveWatch(@ModelAttribute Watch watch) {
+        watchRepository.save(watch);
+        return "redirect:/watches";
+    }
+
+    //Тебе бы короче сделать методы edit и remove
+    //Дальше надо думать что хотим вообще сделать
+    //Сделай пока просто по id
+
 }
